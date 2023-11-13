@@ -31,3 +31,27 @@ npx create-medusa-app@latest
 ```
 
 Note that the default user and password for postgres is gitpod.
+
+Postgres Troubleshooting tips: https://stackoverflow.com/questions/15301826/psql-fatal-role-postgres-does-not-exist
+
+We also have the option to configure the Postgresql DB with Supabase or Vercel Postgresql
+
+
+### Running the App
+- To run the app backend, cd to `my-medusa-store` and run `npx medusa develop` or `npm run dev`
+- To run the storefront, cd to `my-medusa-store-storefront` and run `npm run dev`
+
+The following ports will be running:
+- 5432 Default Postgresql port (Should always be running)
+- 9000 App Backend and API
+- 7001 Admin Dashboard
+- 8000 Storefront
+
+The default admin credentials
+```
+email: admin@medusa-test.com
+password: superuser
+```
+
+Note: I am unable to access the admin page when running on gitpod. This is a known problem:
+https://github.com/medusajs/medusa/discussions/4822
